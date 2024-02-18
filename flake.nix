@@ -47,6 +47,7 @@
       ];
 
       buildInputs = with pkgs; [
+        cups
         xorg.libXdmcp
         libarchive
         xorg.libpthreadstubs
