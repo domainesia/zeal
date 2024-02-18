@@ -10,5 +10,5 @@ add_library(Browser STATIC
 
 target_link_libraries(Browser)
 
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS WebChannel WebEngineWidgets REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS WebChannel WebEngineWidgets REQUIRED NO_PACKAGE_ROOT_PATH)
 target_link_libraries(Browser Qt${QT_VERSION_MAJOR}::WebChannel Qt${QT_VERSION_MAJOR}::WebEngineWidgets)
