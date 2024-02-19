@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: DeterminateSystems/nix-installer-action@main
-      - run: nix build .
+      - run: nix build -vvv .; nix log -vvv . | cat
