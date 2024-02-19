@@ -39,6 +39,11 @@
           --replace 'ZEAL_VERSION_SUFFIX "-dev"' 'ZEAL_VERSION_SUFFIX ""'
       '';
 
+      installPhase =  lib.optional pkgs.stdenv.isDarwin ''
+        mkdir -p $out/;
+        cp -r Zeal.app $out/Zeal.app;
+      '';
+
       nativeBuildInputs = with pkgs; [
         cmake
         extra-cmake-modules
