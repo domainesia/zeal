@@ -7,9 +7,6 @@ jobs:
   build:
     name: Build Flake check
     runs-on: macos-latest
-    permissions:
-      id-token: "write"
-      contents: "read"
     steps:
       - uses: actions/checkout@v3
       - uses: DeterminateSystems/nix-installer-action@main
