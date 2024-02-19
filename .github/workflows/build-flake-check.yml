@@ -6,8 +6,8 @@ on:
 jobs:
   build:
     name: Build Flake check
-    runs-on: macos-13
+    runs-on: macos-14
     steps:
       - uses: actions/checkout@v3
       - uses: DeterminateSystems/nix-installer-action@main
-      - run: nix build -L -vvv --log-format raw .
+      - run: nix build -L
